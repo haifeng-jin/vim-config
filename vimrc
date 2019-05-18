@@ -83,8 +83,14 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 Plugin 'kien/ctrlp.vim'
 set nu
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+Plugin 'vim-airline/vim-airline'
+
 set clipboard=unnamed
 
 highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 match BadWhiteSpace /\s\+$/
+
+Plugin 'git@github.com:alfredodeza/pytest.vim.git'
+filetype on
+filetype plugin on
