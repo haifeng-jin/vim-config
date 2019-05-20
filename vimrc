@@ -76,8 +76,9 @@ endif
 call togglebg#map("<F5>")
 
 Plugin 'scrooloose/nerdtree'
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__'] "ignore files in NERDTree
 map <C-n> :NERDTreeToggle<CR>
+" auto show if vim starts in a directory instead of files.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
@@ -94,3 +95,12 @@ match BadWhiteSpace /\s\+$/
 Plugin 'git@github.com:alfredodeza/pytest.vim.git'
 filetype on
 filetype plugin on
+map <leader>r  :Pytest function<CR> " run test
+map <leader>f  :Pytest fails<CR> " show failed cases
+map <leader>e  :Pytest error<CR> " show error
+map <leader>s  :Pytest session<CR> " show session
+map <leader>d  :Pytest end<CR> " jump to the end line of the error
+map <leader>x  :Pytest previous<CR> " jump to previous error
+map <leader>c  :Pytest next<CR> " jump to next error 
+
+Plugin 'mileszs/ack.vim'
