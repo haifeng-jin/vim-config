@@ -101,6 +101,11 @@ map <leader>e  :Pytest error<CR> " show error
 map <leader>s  :Pytest session<CR> " show session
 map <leader>d  :Pytest end<CR> " jump to the end line of the error
 map <leader>x  :Pytest previous<CR> " jump to previous error
-map <leader>c  :Pytest next<CR> " jump to next error 
+map <leader>c  :Pytest next<CR> " jump to next error
 
 Plugin 'mileszs/ack.vim'
+
+
+" Parenthesis
+hi MatchParen ctermbg=blue guibg=lightblue
+Plugin 'jiangmiao/auto-pairs'
