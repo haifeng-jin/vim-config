@@ -9,7 +9,7 @@ set foldlevel=99
 nnoremap <space> za
 
 " Color Scheme
-Plug 'arcticicestudio/nord-vim'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Auto Pair the parenthesis.
 Plug 'jiangmiao/auto-pairs'
@@ -34,7 +34,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
-let g:airline_theme='nord'
 
 " Git integration.
 Plug 'tpope/vim-fugitive'
@@ -55,7 +54,8 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Color Scheme
-colorscheme nord
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 " Split the tabs below and right.
 set splitbelow
