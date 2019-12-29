@@ -8,6 +8,9 @@ set foldlevel=99
 " Enable folding with the spacebar.
 nnoremap <space> za
 
+" Color Scheme
+Plug 'arcticicestudio/nord-vim'
+
 " Auto Pair the parenthesis.
 Plug 'jiangmiao/auto-pairs'
 
@@ -31,7 +34,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
-let g:airline_theme='dark'
+let g:airline_theme='nord'
 
 " Git integration.
 Plug 'tpope/vim-fugitive'
@@ -51,6 +54,9 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+" Color Scheme
+colorscheme nord
+
 " Split the tabs below and right.
 set splitbelow
 set splitright
@@ -66,15 +72,15 @@ set tabstop=4 " Tab to 4 spaces.
 set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
 set hlsearch " Highlight the search word.
-hi Search ctermfg=0 " Font color for search.
-hi MatchParen ctermbg=none ctermfg=4 " Parenthesis maching highlighting.
-hi ExtraWhitespace ctermbg=0 " Color of trailing whitespace.
-hi Folded ctermbg=none " No bg color for folded code.
-hi Pmenu ctermbg=0 ctermfg=7 " No style, only font color for the popup pane.
 set cursorline " Highlight the cursor line.
-hi CursorLine cterm=None " No style for cursor line.
-hi CursorLine ctermbg=235 " Highlight the background of cursor line.
-match ExtraWhitespace /\s\+$/
+" hi Search ctermfg=0 " Font color for search.
+" hi MatchParen ctermbg=none ctermfg=4 " Parenthesis maching highlighting.
+" hi ExtraWhitespace ctermbg=0 " Color of trailing whitespace.
+" hi Folded ctermbg=none " No bg color for folded code.
+" hi Pmenu ctermbg=0 ctermfg=7 " No style, only font color for the popup pane.
+" hi CursorLine cterm=None " No style for cursor line.
+" hi CursorLine ctermbg=235 " Highlight the background of cursor line.
+" match ExtraWhitespace /\s\+$/
 set expandtab " Use spaces for tabs.
 set autoindent
 set fileformat=unix
