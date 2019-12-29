@@ -8,6 +8,9 @@ set foldlevel=99
 " Enable folding with the spacebar.
 nnoremap <space> za
 
+" Auto Pair the parenthesis.
+Plug 'jiangmiao/auto-pairs'
+
 " Indent for python.
 Plug 'vim-scripts/indentpython.vim'
 
