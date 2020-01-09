@@ -9,7 +9,7 @@ set foldlevel=99
 nnoremap <space> za
 
 " Color Scheme
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'sainnhe/edge'
 
 " Auto Pair the parenthesis.
 Plug 'jiangmiao/auto-pairs'
@@ -54,8 +54,11 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Color Scheme
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+set termguicolors
+set background=dark
+let g:edge_style = 'neon'
+let g:edge_disable_italic_comment = 1
+colorscheme edge
 
 " Split the tabs below and right.
 set splitbelow
