@@ -25,8 +25,7 @@ Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree.
 " Use <c-n> to show and hide the tree.
-map <C-n> :NERDTreeToggle<CR>
-
+map <C-n> :NERDTreeToggle<CR> 
 " Use ctrl+p to find files.
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -34,6 +33,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
+" remove the filetype part
+let g:airline_section_y=''
+" remove separators for empty sections
+let g:airline_skip_empty_sections = 1
+let g:airline_section_error = ''
+let g:airline_section_warning = ''
+let g:airline#extensions#branch#vcs_checks = []
 
 " Git integration.
 Plug 'tpope/vim-fugitive'
@@ -76,14 +82,6 @@ set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
 set hlsearch " Highlight the search word.
 set cursorline " Highlight the cursor line.
-" hi Search ctermfg=0 " Font color for search.
-" hi MatchParen ctermbg=none ctermfg=4 " Parenthesis maching highlighting.
-" hi ExtraWhitespace ctermbg=0 " Color of trailing whitespace.
-" hi Folded ctermbg=none " No bg color for folded code.
-" hi Pmenu ctermbg=0 ctermfg=7 " No style, only font color for the popup pane.
-" hi CursorLine cterm=None " No style for cursor line.
-" hi CursorLine ctermbg=235 " Highlight the background of cursor line.
-" match ExtraWhitespace /\s\+$/
 set expandtab " Use spaces for tabs.
 set autoindent
 set fileformat=unix
