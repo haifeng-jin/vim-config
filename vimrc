@@ -7,7 +7,11 @@ set foldmethod=indent
 set foldlevel=99
 " Enable folding with the spacebar.
 nnoremap <space> za
-
+"
+" Nerd Commenter
+" Comment and uncomment with <leader>c<space>.
+Plug 'preservim/nerdcommenter'
+"
 " Color Scheme
 Plug 'sainnhe/edge'
 
@@ -16,7 +20,16 @@ Plug 'jiangmiao/auto-pairs'
 
 " Indent for python.
 Plug 'vim-scripts/indentpython.vim'
-
+"
+" Tests
+Plug 'janko/vim-test'
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+"
 " The flake8 plugin for python.
 " Use <F7> to run flake8 on the current python file.
 Plug 'nvie/vim-flake8'
@@ -35,6 +48,7 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
 " remove the filetype part
 let g:airline_section_y=''
+let g:airline_section_z = '%4l : %4c'
 " remove separators for empty sections
 let g:airline_skip_empty_sections = 1
 let g:airline_section_error = ''
@@ -59,6 +73,9 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+" Use :R to run shell commands and receive results in window, e.g., ":R ls ".
+command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
+
 " Color Scheme
 set termguicolors
 set background=dark
@@ -75,8 +92,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+"
+" Map leader key to ","
+let mapleader = ","
 
-set nu " Set line number.
+set nu rnu " Set line number.
 set tabstop=4 " Tab to 4 spaces.
 set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
