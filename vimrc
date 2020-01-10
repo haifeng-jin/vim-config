@@ -79,7 +79,7 @@ command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=h
 " Color Scheme
 set termguicolors
 set background=dark
-let g:edge_style = 'neon'
+let g:edge_style = 'default'
 let g:edge_disable_italic_comment = 1
 colorscheme edge
 
