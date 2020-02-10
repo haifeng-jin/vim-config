@@ -1,3 +1,5 @@
+" Build
+nmap <leader>b :!asciidoctor-pdf %<CR>
 " Vim syntax file
 " Language:     AsciiDoc
 " Author:       Stuart Rackham <srackham@gmail.com> (inspired by Felix
