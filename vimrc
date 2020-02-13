@@ -19,8 +19,8 @@ Plug 'sainnhe/edge'
 Plug 'jiangmiao/auto-pairs'
 
 " Indent for python.
-Plug 'vim-scripts/indentpython.vim'
-"
+Plug 'vim-scripts/indentpython.vim' { 'for' : 'python' }
+
 " Tests
 Plug 'janko/vim-test'
 Plug 'skywind3000/asyncrun.vim'
@@ -37,10 +37,6 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-a> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
-"
-" The flake8 plugin for python.
-" Use <F7> to run flake8 on the current python file.
-Plug 'nvie/vim-flake8'
 
 " File tree.
 Plug 'scrooloose/nerdtree'
@@ -67,7 +63,7 @@ let g:airline#extensions#branch#vcs_checks = []
 Plug 'tpope/vim-fugitive'
 
 " Autocompletion and goto definition.
-Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim' { 'for' : 'python' }
 let g:jedi#popup_on_dot = 0 " Disable pop up autocomplete.
 let g:jedi#completions_enabled = 0 " Disable autocomplete.
 let g:jedi#show_call_signatures = "2" " show signature on command line.
@@ -78,6 +74,9 @@ Plug 'zxqfl/tabnine-vim'
 " Show git diff.
 " <leader>hp to preview the hunks.
 Plug 'airblade/vim-gitgutter'
+
+" Latex plugin.
+Plug 'lervag/vimtex' { 'for' : 'tex' }
 
 call plug#end()
 
