@@ -90,9 +90,6 @@ set background=dark
 let g:edge_disable_italic_comment = 1
 colorscheme edge
 
-" Syntax highlight for AsciiDoc
-autocmd BufNewFile,BufRead *.adoc set syntax=adoc
-
 " Split the tabs below and right.
 set splitbelow
 set splitright
