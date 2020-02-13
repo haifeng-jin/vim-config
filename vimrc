@@ -19,7 +19,7 @@ Plug 'sainnhe/edge'
 Plug 'jiangmiao/auto-pairs'
 
 " Indent for python.
-Plug 'vim-scripts/indentpython.vim' { 'for' : 'python' }
+Plug 'vim-scripts/indentpython.vim', { 'for' : 'python' }
 
 " Tests
 Plug 'janko/vim-test'
@@ -63,7 +63,7 @@ let g:airline#extensions#branch#vcs_checks = []
 Plug 'tpope/vim-fugitive'
 
 " Autocompletion and goto definition.
-Plug 'davidhalter/jedi-vim' { 'for' : 'python' }
+Plug 'davidhalter/jedi-vim', { 'for' : 'python' }
 let g:jedi#popup_on_dot = 0 " Disable pop up autocomplete.
 let g:jedi#completions_enabled = 0 " Disable autocomplete.
 let g:jedi#show_call_signatures = "2" " show signature on command line.
@@ -76,7 +76,7 @@ Plug 'zxqfl/tabnine-vim'
 Plug 'airblade/vim-gitgutter'
 
 " Latex plugin.
-Plug 'lervag/vimtex' { 'for' : 'tex' }
+Plug 'lervag/vimtex', { 'for' : 'tex' }
 
 call plug#end()
 
