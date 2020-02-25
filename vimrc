@@ -69,7 +69,7 @@ let g:jedi#completions_enabled = 0 " Disable autocomplete.
 let g:jedi#show_call_signatures = "2" " show signature on command line.
 
 " TabNine autocomplete.
-Plug 'zxqfl/tabnine-vim'
+Plug 'zxqfl/tabnine-vim', { 'for' : 'python' }
 
 " Show git diff.
 " <leader>hp to preview the hunks.
