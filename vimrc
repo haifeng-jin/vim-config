@@ -63,6 +63,10 @@ let g:airline#extensions#branch#vcs_checks = []
 Plug 'tpope/vim-fugitive'
 
 " Autocompletion and goto definition.
+" <leader>d go to definition
+" <leader>n find 
+" <leader>r rename 
+" K show documentation
 Plug 'davidhalter/jedi-vim', { 'for' : 'python' }
 let g:jedi#popup_on_dot = 0 " Disable pop up autocomplete.
 let g:jedi#completions_enabled = 0 " Disable autocomplete.
@@ -77,6 +81,12 @@ Plug 'airblade/vim-gitgutter'
 
 " Latex plugin.
 Plug 'lervag/vimtex', { 'for' : 'tex' }
+
+" Showing code test coverage
+" :CoverageToggle
+Plug 'google/vim-maktaba', { 'for' : 'python' }
+Plug 'google/vim-coverage', { 'for' : 'python' }
+Plug 'google/vim-glaive', { 'for' : 'python' }
 
 call plug#end()
 
