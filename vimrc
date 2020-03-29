@@ -58,6 +58,8 @@ let g:airline_skip_empty_sections = 1
 let g:airline_section_error = ''
 let g:airline_section_warning = ''
 let g:airline#extensions#branch#vcs_checks = []
+" Use the same airline theme for tmux
+Plug 'edkolev/tmuxline.vim'
 
 " Git integration.
 Plug 'tpope/vim-fugitive'
