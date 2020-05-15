@@ -52,7 +52,7 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
 " remove the filetype part
 let g:airline_section_y=''
-let g:airline_section_z = '%4l : %4c'
+let g:airline_section_z = '%4l : %-4c'
 " remove separators for empty sections
 let g:airline_skip_empty_sections = 1
 let g:airline_section_error = ''
