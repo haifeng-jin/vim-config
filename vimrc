@@ -49,7 +49,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Vim status bar.
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 " remove the filetype part
 let g:airline_section_y=''
 let g:airline_section_z = '%4l : %-4c'
@@ -60,6 +60,7 @@ let g:airline_section_warning = ''
 let g:airline#extensions#branch#vcs_checks = []
 " Use the same airline theme for tmux
 Plug 'edkolev/tmuxline.vim'
+let g:tmuxline_powerline_separators = 0
 
 " Git integration.
 Plug 'tpope/vim-fugitive'
@@ -128,3 +129,4 @@ set backspace=2
 filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
+set t_Co=256
