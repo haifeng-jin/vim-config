@@ -130,3 +130,4 @@ filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
 set t_Co=256
+hi cursorline guibg=grey21
