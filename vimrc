@@ -92,6 +92,9 @@ Plug 'google/vim-coverage', { 'for' : 'python' }
 Plug 'google/vim-glaive', { 'for' : 'python' }
 
 call plug#end()
+"
+" Search selected text. Select the text and type '//'
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " Use :R to run shell commands and receive results in window, e.g., ":R ls ".
 command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
@@ -130,3 +133,4 @@ filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
 set t_Co=256
+hi cursorline guibg=grey21
