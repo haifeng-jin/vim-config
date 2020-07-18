@@ -1,4 +1,6 @@
 call plug#begin('~/.vim/plugged')
+" Toggle floating panels.
+Plug 'voldikss/vim-floaterm'
 " Fold for Python.
 Plug 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview=1
@@ -100,7 +102,6 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
 
 " Color Scheme
-set termguicolors
 set background=dark
 let g:edge_disable_italic_comment = 1
 colorscheme edge
@@ -132,5 +133,3 @@ set backspace=2
 filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
-set t_Co=256
-hi cursorline guibg=grey21
