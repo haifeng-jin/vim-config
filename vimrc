@@ -35,8 +35,6 @@ autocmd TerminalOpen * setlocal nonumber norelativenumber
 " File tree.
 Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree.
-" Use <c-n> to show and hide the tree.
-map <C-n> :NERDTreeToggle<CR> 
 " Use ctrl+p to find files.
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -147,6 +145,7 @@ let g:which_key_map['w'] = {
             \ 's' : ['<C-W>s'     , 'split-window-below']    ,
             \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
             \ '?' : ['Windows'    , 'fzf-window']            ,
+            \ 'n' : [':NERDTreeToggle'    , 'toggle-nerd-tree']            ,
             \ }
 let g:which_key_map['j'] = {
             \ 'name': '+jump',
