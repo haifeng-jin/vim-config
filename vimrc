@@ -163,6 +163,9 @@ set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
 set hlsearch " Highlight the search word.
 set cursorline " Highlight the cursor line.
+set cursorcolumn " Highlight the cursor line.
+highlight CursorLine ctermbg=235
+highlight CursorColumn ctermbg=235
 set expandtab " Use spaces for tabs.
 set autoindent
 set fileformat=unix
