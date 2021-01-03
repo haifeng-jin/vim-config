@@ -96,7 +96,7 @@ command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=h
 " Color Scheme
 set background=dark
 let g:edge_disable_italic_comment = 1
-colorscheme edge
+" colorscheme edge
 
 " Split the tabs below and right.
 set splitbelow
