@@ -155,9 +155,7 @@ let g:which_key_map['f'] = {'name': '+find'}
 let g:which_key_map['SPC'] = {'name': 'fold'}
 let g:which_key_map['f'].s = 'search selected'
 
-if exists('*which_key#register')
-    call which_key#register('<Space>', "g:which_key_map")
-endif
+silent! call which_key#register('<Space>', "g:which_key_map")
 
 set nu rnu " Set line number.
 set tabstop=4 " Tab to 4 spaces.
