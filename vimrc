@@ -73,7 +73,7 @@ let g:jedi#usages_command = "<leader>fu"
 let g:jedi#rename_command = "<leader>r"
 
 " TabNine autocomplete.
-Plug 'zxqfl/tabnine-vim', { 'for' : 'python' }
+Plug 'codota/tabnine-vim', { 'for' : 'python' }
 
 " Show git diff.
 " <leader>hp to preview the hunks.
