@@ -73,7 +73,7 @@ let g:jedi#usages_command = "<leader>fu"
 let g:jedi#rename_command = "<leader>r"
 
 " TabNine autocomplete.
-" Plug 'codota/tabnine-vim'
+Plug 'codota/tabnine-vim'
 
 " Show git diff.
 " <leader>hp to preview the hunks.
@@ -164,7 +164,7 @@ set shiftwidth=4 " The indent space.
 set hlsearch " Highlight the search word.
 set cursorline " Highlight the cursor line.
 set cursorcolumn " Highlight the cursor line.
-highlight CursorLine ctermbg=235
+highlight CursorLine ctermbg=235 cterm=NONE 
 highlight CursorColumn ctermbg=235
 set expandtab " Use spaces for tabs.
 set autoindent
