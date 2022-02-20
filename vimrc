@@ -56,7 +56,7 @@ Plug 'edkolev/tmuxline.vim'
 let g:tmuxline_powerline_separators = 0
 
 " Git integration.
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 
 " Autocompletion and goto definition.
 " <leader>d go to definition
