@@ -95,16 +95,9 @@ call plug#end()
 command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
 
 " Color Scheme
-" Important!!
-if has('termguicolors')
-  set termguicolors
-endif
-" The configuration options should be placed before `colorscheme edge`.
-let g:edge_style = 'light'
-let g:edge_enable_italic = 1
+set background=dark
 let g:edge_disable_italic_comment = 1
-colorscheme edge
-"set background=dark
+" colorscheme edge
 
 " Split the tabs below and right.
 set splitbelow
