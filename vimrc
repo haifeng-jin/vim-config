@@ -63,18 +63,18 @@ let g:tmuxline_powerline_separators = 0
 " <leader>n find 
 " <leader>r rename 
 " K show documentation
-Plug 'davidhalter/jedi-vim', { 'for' : 'python' }
-let g:jedi#popup_on_dot = 0 " Disable pop up autocomplete.
-let g:jedi#completions_enabled = 0 " Disable autocomplete.
-let g:jedi#show_call_signatures = "2" " show signature on command line.
-let g:jedi#goto_command = "<leader>jd"
-let g:jedi#goto_assignments_command = "<leader>jg"
-let g:jedi#goto_stubs_command = "<leader>js"
-let g:jedi#usages_command = "<leader>fu"
-let g:jedi#rename_command = "<leader>r"
+"Plug 'davidhalter/jedi-vim', { 'for' : 'python' }
+"let g:jedi#popup_on_dot = 0 " Disable pop up autocomplete.
+"let g:jedi#completions_enabled = 0 " Disable autocomplete.
+"let g:jedi#show_call_signatures = "2" " show signature on command line.
+"let g:jedi#goto_command = "<leader>jd"
+"let g:jedi#goto_assignments_command = "<leader>jg"
+"let g:jedi#goto_stubs_command = "<leader>js"
+"let g:jedi#usages_command = "<leader>fu"
+"let g:jedi#rename_command = "<leader>r"
 
 " TabNine autocomplete.
-Plug 'codota/tabnine-vim'
+"Plug 'codota/tabnine-vim'
 
 " Show git diff.
 " <leader>hp to preview the hunks.
