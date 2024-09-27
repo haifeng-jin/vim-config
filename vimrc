@@ -22,18 +22,10 @@ let g:airline_section_error = ''
 let g:airline_section_warning = ''
 let g:airline#extensions#branch#vcs_checks = []
 " Use the same airline theme for tmux
-Plug 'edkolev/tmuxline.vim'
-let g:tmuxline_powerline_separators = 0
-
-" Latex plugin.
-Plug 'lervag/vimtex', { 'for' : 'tex' }
+" Plug 'edkolev/tmuxline.vim'
+" let g:tmuxline_powerline_separators = 0
 
 call plug#end()
-
-" Color Scheme
-set background=dark
-let g:edge_disable_italic_comment = 1
-" colorscheme edge
 
 " Split the tabs below and right.
 set splitbelow
@@ -44,12 +36,8 @@ set tabstop=4 " Tab to 4 spaces.
 set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
 set hlsearch " Highlight the search word.
-"set cursorline " Highlight the cursor line.
-"set cursorcolumn " Highlight the cursor line.
-highlight CursorLine ctermbg=235 cterm=NONE 
-highlight CursorColumn ctermbg=235
 set expandtab " Use spaces for tabs.
-set autoindent
+set autoindent " Auto indent on new lines.
 set fileformat=unix
 set encoding=utf-8
 set backspace=2
