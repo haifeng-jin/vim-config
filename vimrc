@@ -9,22 +9,6 @@ Plug 'vim-scripts/indentpython.vim', { 'for' : 'python' }
 " Use ctrl+p to find files.
 Plug 'ctrlpvim/ctrlp.vim'
 
-" Vim status bar.
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_powerline_fonts=0
-" remove the filetype part
-let g:airline_section_y=''
-let g:airline_section_z = '%4l : %-4c'
-" remove separators for empty sections
-let g:airline_skip_empty_sections = 1
-let g:airline_section_error = ''
-let g:airline_section_warning = ''
-let g:airline#extensions#branch#vcs_checks = []
-" Use the same airline theme for tmux
-" Plug 'edkolev/tmuxline.vim'
-" let g:tmuxline_powerline_separators = 0
-
 call plug#end()
 
 " Split the tabs below and right.
