@@ -11,6 +11,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
+" Allow copy to system clipboard
+" when using Secure Shell Chrome Extension
+source ~/.vim/osc52.vim
+vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
+
 " Split the tabs below and right.
 set splitbelow
 set splitright
