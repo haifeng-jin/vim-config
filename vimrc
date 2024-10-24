@@ -33,7 +33,3 @@ set backspace=2
 filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
-
-" Let CtrlP not go all the way up to the root of the client. Instead, consider a
-" METADATA file to delimit a project.
-let g:ctrlp_root_markers = ['METADATA']
