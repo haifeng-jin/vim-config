@@ -1,2 +1,3 @@
 autoload
 plugged
+after/ftplugin/google.vim
