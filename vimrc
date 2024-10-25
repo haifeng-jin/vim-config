@@ -20,10 +20,11 @@ vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
 set splitbelow
 set splitright
 
-set nu rnu " Set line number.
 set tabstop=4 " Tab to 4 spaces.
 set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
+
+set nu rnu " Set line number.
 set hlsearch " Highlight the search word.
 set expandtab " Use spaces for tabs.
 set autoindent " Auto indent on new lines.
@@ -33,3 +34,6 @@ set backspace=2
 filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
+
+" Restrict CtrlP to searching only the directories from which we ran vim.
+let g:ctrlp_working_path_mode = 0
