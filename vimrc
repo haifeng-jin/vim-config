@@ -20,6 +20,9 @@ vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
 set splitbelow
 set splitright
 
+" Let it create swp files in a specified dir.
+set directory=~/.vim/swp
+
 set tabstop=4 " Tab to 4 spaces.
 set softtabstop=4 " While backspacing tabs.
 set shiftwidth=4 " The indent space.
