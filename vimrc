@@ -57,11 +57,17 @@ nnoremap <leader>cf :call SendViaOSC52(expand('%'))<cr>:echo "Copied: " . expand
 nnoremap <leader>ec :Commentary<cr>
 vnoremap <leader>ec :Commentary<cr>
 
+" Search for selected text.
+vnoremap <leader>ss y/\V<C-R>=escape(@",'/\')<CR><CR>
+nnoremap <leader>ss *
+
 " Menu labels
 let g:which_key_map = {}
 let g:which_key_map.c = { 'name': '+copy' }
 let g:which_key_map.c.f = 'copy-file-path'
 let g:which_key_map.e = { 'name': '+edit' }
 let g:which_key_map.e.c = 'comment'
+let g:which_key_map.s = { 'name': '+search' }
+let g:which_key_map.s.s = 'search-selection'
 
 call which_key#register('<Space>', "g:which_key_map")
