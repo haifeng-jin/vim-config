@@ -38,5 +38,6 @@ filetype on " Use syntax based on file type.
 filetype plugin on " Use plugins based file type.
 syntax on " Highlight
 
-" Restrict CtrlP to searching only the directories from which we ran vim.
-let g:ctrlp_working_path_mode = 0
+" Let CtrlP not go all the way up to the root of the client. Instead, consider a
+" METADATA file to delimit a project.
+let g:ctrlp_root_markers = ['METADATA']
