@@ -9,35 +9,59 @@ Plug 'vim-scripts/indentpython.vim', { 'for' : 'python' }
 " Use ctrl+p to find files.
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Show the leader key menu.
+Plug 'liuchengxu/vim-which-key'
+
+" Comment out lines.
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
-" Allow copy to system clipboard
-" when using Secure Shell Chrome Extension
-source ~/.vim/osc52.vim
-vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
-
-" Split the tabs below and right.
+" === General Settings ===
 set splitbelow
 set splitright
-
-" Let it create swp files in a specified dir.
 set directory=/tmp
-
-set tabstop=4 " Tab to 4 spaces.
-set softtabstop=4 " While backspacing tabs.
-set shiftwidth=4 " The indent space.
-
-set nu rnu " Set line number.
-set hlsearch " Highlight the search word.
-set expandtab " Use spaces for tabs.
-set autoindent " Auto indent on new lines.
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set nu rnu
+set hlsearch
+set showcmd
+set expandtab
+set autoindent
 set fileformat=unix
 set encoding=utf-8
 set backspace=2
-filetype on " Use syntax based on file type.
-filetype plugin on " Use plugins based file type.
-syntax on " Highlight
+filetype on
+filetype plugin on
+syntax on
 
-" Let CtrlP not go all the way up to the root of the client. Instead, consider a
-" METADATA file to delimit a project.
+" === Plugin Configurations ===
+" osc52: Allow copy to system clipboard
+source ~/.vim/osc52.vim
+vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
+
+" CtrlP: Project delimiting
 let g:ctrlp_root_markers = ['METADATA']
+
+" === Space Leader & Shortcuts (SpaceVim-like) ===
+let mapleader = "\<Space>"
+set timeoutlen=500
+
+" Trigger which-key menu
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+
+" Define mappings
+nnoremap <leader>cf :call SendViaOSC52(expand('%'))<cr>:echo "Copied: " . expand('%')<cr>
+nnoremap <leader>ec :Commentary<cr>
+vnoremap <leader>ec :Commentary<cr>
+
+" Menu labels
+let g:which_key_map = {}
+let g:which_key_map.c = { 'name': '+copy' }
+let g:which_key_map.c.f = 'copy-file-path'
+let g:which_key_map.e = { 'name': '+edit' }
+let g:which_key_map.e.c = 'comment'
+
+call which_key#register('<Space>', "g:which_key_map")
