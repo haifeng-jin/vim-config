@@ -70,4 +70,6 @@ let g:which_key_map.e.c = 'comment'
 let g:which_key_map.s = { 'name': '+search' }
 let g:which_key_map.s.s = 'search-selection'
 
-call which_key#register('<Space>', "g:which_key_map")
+if exists('*which_key#register')
+    call which_key#register('<Space>', "g:which_key_map")
+endif
